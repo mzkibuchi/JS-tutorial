@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    body {
+      background-color: rgb(17, 14, 188);
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+    }
+
+    p {
+      font-family: verdana;
+      font-size: 20px;
+    }
+  </style>
   <head>
     <title>My Web Page</title>
   </head>
   <body>
-
     <h1>My Web Page</h1>
 
     <button type="button" onclick="myFunction()">use this.</button>
@@ -13,7 +27,7 @@
     <button type="button" onclick="counterfunction2()">counterclear</button>
 
     <p id="demo1"></p>
-    <p id="demo2"></p> 
+    <p id="demo2"></p>
     <p id="demo3"></p>
     <p id="demo4"></p>
     <h1 id="myH"></h1>
@@ -21,13 +35,14 @@
 
     <script>
       // Function 1: Show text
-      function myFunction() { 
-        document.getElementById("demo1").innerHTML = "My first time using JavaScript";
+      function myFunction() {
+        document.getElementById("demo1").innerHTML =
+          "My first time using JavaScript";
         document.getElementById("demo2").innerHTML = "Coding so far is easy";
       }
 
       // Function 2: Clear text
-      function myFunction2() { 
+      function myFunction2() {
         document.getElementById("demo1").innerHTML = "";
         document.getElementById("demo2").innerHTML = "";
       }
@@ -36,30 +51,29 @@
       document.getElementById("myH").innerHTML = "JavaScript Comments";
       document.getElementById("myP").innerHTML = "My first paragraph.";
     </script>
-
   </body>
 
+  <p>
+    <script>
+      // Function 3:count
+      function counterfunction() {
+        let text = "";
 
-<p>
-<script>
-// Function 3:count
-function counterfunction() {
-let text = "";
+        for (let i = 0; i < 10; i++) {
+          if (i === 3) {
+            break;
+          }
+          text += "The number is " + i + "<br>";
+        }
 
-for (let i = 0; i < 10; i++) {
-  if (i === 3) { break; }
-  text += "The number is " + i + "<br>";
-} 
+        document.getElementById("demo3").innerHTML = text;
+      }
 
-document.getElementById("demo3").innerHTML = text;
-}
-
-//function 4: Clear text
-function counterfunction2() {
-  document.getElementById("demo3").innerHTML = "";
-  document.getElementById("demo4").innerHTML = "";}
-</script>
-</p>
-
-
+      //function 4: Clear text
+      function counterfunction2() {
+        document.getElementById("demo3").innerHTML = "";
+        document.getElementById("demo4").innerHTML = "";
+      }
+    </script>
+  </p>
 </html>

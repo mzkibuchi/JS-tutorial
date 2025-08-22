@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Web Page</title>
+  </head>
+  <body>
+
+    <h1>My Web Page</h1>
+
+    <button type="button" onclick="myFunction()">use this.</button>
+    <button type="button" onclick="myFunction2()">clear</button>
+    <button type="button" onclick="counterfunction()">counter</button>
+    <button type="button" onclick="counterfunction2()">counterclear</button>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p> 
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+
+    <script>
+      // Function 1: Show text
+      function myFunction() { 
+        document.getElementById("demo1").innerHTML = "My first time using JavaScript";
+        document.getElementById("demo2").innerHTML = "Coding so far is easy";
+      }
+
+      // Function 2: Clear text
+      function myFunction2() { 
+        document.getElementById("demo1").innerHTML = "";
+        document.getElementById("demo2").innerHTML = "";
+      }
+
+      // Change heading and paragraph automatically on load
+      document.getElementById("myH").innerHTML = "JavaScript Comments";
+      document.getElementById("myP").innerHTML = "My first paragraph.";
+    </script>
+
+  </body>
+
+
+<p>
+<script>
+// Function 3:count
+function counterfunction() {
+let text = "";
+
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { break; }
+  text += "The number is " + i + "<br>";
+} 
+
+document.getElementById("demo3").innerHTML = text;
+}
+
+//function 4: Clear text
+function counterfunction2() {
+  document.getElementById("demo3").innerHTML = "";
+  document.getElementById("demo4").innerHTML = "";}
+</script>
+</p>
+
+
+</html>
